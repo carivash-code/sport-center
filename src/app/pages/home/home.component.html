@@ -1,24 +1,5 @@
-<div class="container">
+<div class="container ">
   <h1 class="text-center py-5">Sitios web para eventos deportivos</h1>
   <hr>
+  <app-carousel></app-carousel>
 </div>
-
-<p-carousel [value]="products" [numVisible]="3" [numScroll]="1" [circular]="false" [responsiveOptions]="responsiveOptions">
-  <ng-template let-product pTemplate="item">  
-    <div class="border-1 surface-border border-round m-2 text-center py-5 px-3 md:shadow-2 sm:shadow-1">
-      <div class="mb-3">
-          <img src="{{ product.image }}" [alt]="product.name" class="shadow-2 img-fluid" />
-      </div>
-      <div>
-          <h4 class="mb-1">{{ product.name }}</h4>
-          <h3 class="mt-0 mb-3" pTooltip="{{'$' + currencyCalculate(product.price) + ' MXN'}}" tooltipPosition="top">{{ '$' + product.price + ' USD'}}</h3>
-          <p-tag [value]="product.inventoryStatus" [severity]="getSeverity(product.inventoryStatus)"></p-tag>
-          <div class="car-buttons mt-5">
-              <p-button type="button" pTooltip="Abir en una nueva pestaña" tooltipPosition="bottom" styleClass="p-button p-button-rounded mr-2" icon="pi pi-external-link" (click)="openWebsite(product.website)"></p-button>
-          </div>
-      </div>
-  </div>
-  </ng-template>
-</p-carousel>
-
-

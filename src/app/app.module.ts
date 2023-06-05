@@ -13,12 +13,23 @@ import { CarouselModule } from 'primeng/carousel';
 import { TagModule } from 'primeng/tag';
 import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
+import { HeaderComponent } from './pages/header/header.component';
+import { FooterComponent } from './pages/footer/footer.component';
+import { SliderComponent } from './pages/slider/slider.component';
+import { MenuBarComponent } from './components/menu-bar/menu-bar.component';
+import { MenubarModule } from 'primeng/menubar';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    HeaderComponent,
+    FooterComponent,
+    SliderComponent,
+    MenuBarComponent,
+    CarouselComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +40,8 @@ import { TooltipModule } from 'primeng/tooltip';
     CarouselModule,
     TagModule,
     ButtonModule,
-    TooltipModule
+    TooltipModule,
+    MenubarModule
   ],
   providers: [],
   bootstrap: [AppComponent]
